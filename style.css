@@ -8,12 +8,28 @@
     --bgColor: white;
     --primaryColor:black;
     --baseVariant:blue;
+    --cardBorderColor: red;
+    --headerColor:gray;
+    --databgColor: white;   
+    --notebgColor: violet;
+    --dataFontSize:4rem;
+    --hederFontSize: 20px;
+    --headerFontfamily: "Cardo", serif;
+    --noteFontfamily:"Handlee", cursive;
 }
 
 .darkmode{
     --bgColor: black;
     --piramryColor: white;
     --baseVariant:blue;
+    --cardBorderColor: red;
+    --headerColor:gray;
+    --databgColor: white;
+    --notebgColor: violet;
+    --dataFontSize:4rem;
+    --hederFontSize: 20px;
+    --headerFontfamily: "Cardo", serif;
+    --noteFontfamily:"Handlee", cursive;
 }
 
 body{
@@ -78,7 +94,10 @@ body{
 .promptArea{
     background-color: bisque;
     grid-area: 2 / 2 / 6 / 5 ;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
 
 .hexaArea{
@@ -114,4 +133,39 @@ body{
 .keyType{
     background-color: chocolate;
     grid-area:  6 / 5 / 11 / 6;
+}
+
+.card{
+    padding: 7px;
+    border: 2px solid var(--cardBorderColor) ;
+}
+
+.header{
+    height: 20%;
+    background-color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: var(--hederFontSize);
+    font-family: var(--headerFontfamily);
+}
+
+.data{
+    height: 60%;
+    background-color: var(--databgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--dataFontSize);
+}
+
+.note{
+    height: 20%;
+    background-color: var(--notebgColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--noteFontfamily);
+    font-weight: bold;
 }
