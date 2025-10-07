@@ -4,3 +4,114 @@
     margin: 0;
 }
 
+:root{
+    --bgColor: white;
+    --primaryColor:black;
+    --baseVariant:blue;
+}
+
+.darkmode{
+    --bgColor: black;
+    --piramryColor: white;
+    --baseVariant:blue;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+/* Start of the toogle bar */
+#theme-switch{
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--baseVariant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+
+}
+
+#theme-switch:hover {
+    transform: scale(1.1);
+}
+
+#theme-switch svg {
+    fill: var(--primary-color);
+    transition: fill 0.4s ease, opacity 0.4s ease;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(300px,1fr));
+    grid-template-rows: repeat(10,minmax(65px,1fr));
+    gap: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.webpageName{
+    background-color: red;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#theme-switch{
+    background-color: aquamarine;
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.promptArea{
+    background-color: bisque;
+    grid-area: 2 / 2 / 6 / 5 ;
+ 
+}
+
+.hexaArea{
+    background-color: blue;
+    grid-area: 2 / 1 / 6 / 2;
+}
+
+.binaryArea{
+    background-color: blanchedalmond;
+    grid-area: 2 / 5 / 6 / 6;
+}
+
+.eventKey{
+    background-color: burlywood;
+    grid-area:  6 / 1 / 11 / 2;
+}
+
+.eventLocation{
+    background-color: cornsilk;
+    grid-area:  6 / 2 / 11 / 3;
+}
+
+.eventCode{
+    background-color: blueviolet;
+    grid-area:  6 / 3 / 11 / 4;
+}
+
+.eventCodeNumber{
+    background-color: cadetblue;
+    grid-area:  6 / 4 / 11 / 5;
+}
+
+.keyType{
+    background-color: chocolate;
+    grid-area:  6 / 5 / 11 / 6;
+}
