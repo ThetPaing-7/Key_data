@@ -1,12 +1,40 @@
-function keydata(themeswitch,prompt){
+function keydata(themeswitch,prompt,containerHolder){
     window.addEventListener("keydown", (e) => {
 
-        // 
+        
+        // Grab the whole Container
+        let container = document.getElementById(containerHolder) 
+        // Grab the prompt the remove
+        let display = document.createElement("div")
+        display.setAttribute('class','promptAreaDisplay')
+        
+        
+        display.textContent = e.keyCode;
+        container.append(display)
+    
+
+        
+
+    
         console.log(e.keyCode)
         console.log(e.key)
         console.log(e.code)
         console.log(e.location)
         console.log(e)
+
+
+        
+        function handlePrompt(e){
+            let promptDisplay = document.getElementById(prompt)
+            if(promptDisplay){
+                promptDisplay.remove()
+            }
+
+            window.removeEventListener("keydown",handlePrompt)
+
+        }
+
+        handlePrompt();
     })
 
     
@@ -34,4 +62,4 @@ function keydata(themeswitch,prompt){
         
 }
 
-keydata('theme-switch')
+keydata('theme-switch','prompt','containerHolder')
