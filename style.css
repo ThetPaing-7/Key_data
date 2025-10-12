@@ -7,13 +7,14 @@
 }
 
 :root {
-    --bgColor: #F8F9F8;
-    --primaryColor: #8BC34A;
+    --bgColor: #F3F8FF;
+    --primaryColor: #8EC3B0;
     --baseVariant: #FFFFFF;
-    --headerColor: #DCEDC8;
-    --databgColor: #F8F9F8;
+    --headerColor: #8EC3B0;
+    --databgColor: #F3F8FF;
     --notebgColor: #FFFFFF;
     --displayColor: #FFFFFF;
+    --cardHoverBgColor:#EA9ABB;
     --textColor: #333333;
     --dataFontSize: 2rem;
     --hederFontSize: 20px;
@@ -30,6 +31,7 @@
     --databgColor: #A594F9;   
     --notebgColor: #CDC1FF;
     --displayColor: #CDC1FF;
+    --cardHoverBgColor:#8000ff;
     --textColor:#FFD369;
     --dataFontSize:2rem;
     --hederFontSize: 20px;
@@ -162,7 +164,20 @@ body{
 }
 
 .card{
-    padding: 7px;
+    padding: 3px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  
+  /* Ensures the element uses its own space for transforms */
+    position: relative; 
+    
+}
+
+.card:hover{
+    background-color: var(--cardHoverBgColor);
+    transform: translateY(-10px) scale(1.02); 
+  
+  /* 3. New, larger shadow for an 'elevated' look */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
 }
 
 .header{

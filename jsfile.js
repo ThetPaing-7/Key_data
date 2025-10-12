@@ -23,6 +23,7 @@ function keydata(themeswitch,prompt,containerHolder,hexa,Binary,eventKey,keyLoca
         ]
         let content = [hexaText,BinaryText,key,location,code,numbericKey,keyTypeVale]
         let Element = [hexa,Binary,eventKey,keyLocation,keycode,keycodeNumber,keyType]
+        let classLists = ["hexaArea","binaryArea","eventKey","eventLocation","eventCode","eventCodeNumber","keyType"]
 
         // Grab the whole Container
         let container = document.getElementById(containerHolder) 
@@ -43,7 +44,8 @@ function keydata(themeswitch,prompt,containerHolder,hexa,Binary,eventKey,keyLoca
         head.textContent = "Key Code"
         
         let display = document.createElement("div")
-        display.setAttribute('class','promptAreaDisplay')
+        display.setAttribute('class','promptAreaDisplay card')
+        
 
         display.textContent = e.keyCode;
         display.append(head)
@@ -76,6 +78,7 @@ function keydata(themeswitch,prompt,containerHolder,hexa,Binary,eventKey,keyLoca
         // Loop all element and append the text
         for(let i = 0; i < Element.length; i++){
             let holder = document.getElementById(Element[i])
+            holder.setAttribute("class",`${classLists[i]} card`)
 
             let header = document.createElement("div")
             header.textContent = headerLists[i]
