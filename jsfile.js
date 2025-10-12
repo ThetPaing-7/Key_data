@@ -151,7 +151,6 @@ function keydata(themeswitch,prompt,containerHolder,hexa,Binary,eventKey,keyLoca
 
     }
     
-    console.log(e)
     // function to handle prompt and remove after click 
     function handlePrompt(e){
             let promptDisplay = document.getElementById(prompt)
