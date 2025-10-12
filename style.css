@@ -4,29 +4,32 @@
     margin: 0;
 }
 
-:root{
-    --bgColor: white;
-    --primaryColor:black;
-    --baseVariant:blue;
-    --cardBorderColor: red;
-    --headerColor:gray;
-    --databgColor: white;   
-    --notebgColor: violet;
-    --dataFontSize:4rem;
+:root {
+    --bgColor: #F8F9F8;
+    --primaryColor: #8BC34A;
+    --baseVariant: #FFFFFF;
+    --headerColor: #DCEDC8;
+    --databgColor: #F8F9F8;
+    --notebgColor: #FFFFFF;
+    --displayColor: #FFFFFF;
+    --textColor: #333333;
+    --dataFontSize: 2rem;
     --hederFontSize: 20px;
     --headerFontfamily: "Cardo", serif;
-    --noteFontfamily:"Handlee", cursive;
+    --noteFontfamily: "Handlee", cursive;
 }
 
+
 .darkmode{
-    --bgColor: black;
-    --piramryColor: white;
-    --baseVariant:blue;
-    --cardBorderColor: red;
-    --headerColor:gray;
-    --databgColor: white;
-    --notebgColor: violet;
-    --dataFontSize:4rem;
+    --bgColor:#211832;
+    --primaryColor:#A594F9;
+    --baseVariant:#F5EFFF;
+    --headerColor:#CDC1FF;
+    --databgColor: #A594F9;   
+    --notebgColor: #CDC1FF;
+    --displayColor: #CDC1FF;
+    --textColor:#FFD369;
+    --dataFontSize:2rem;
     --hederFontSize: 20px;
     --headerFontfamily: "Cardo", serif;
     --noteFontfamily:"Handlee", cursive;
@@ -82,17 +85,23 @@ body{
 }
 
 .webpageName{
-    background-color: red;
+    color: var(--textColor);
     grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#theme-switch{
-    background-color: aquamarine;
+.buttonArea{
     grid-area: 1 / 5 / 2 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .promptArea{
-    background-color: bisque;
+    color: var(--textColor);
+    background-color: var(--piramryColor);
     grid-area: 2 / 2 / 6 / 5 ;
     display: flex;
     justify-content: center;
@@ -101,53 +110,57 @@ body{
 }
 
 .promptAreaDisplay{
-    background-color: bisque;
+    background-color: var(--displayColor);
     grid-area: 2 / 2 / 6 / 5 ;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 32px;
+    gap: 15px;
     font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    
 }
 
 .hexaArea{
-    background-color: blue;
+    background-color: var(--piramryColor);
     grid-area: 2 / 1 / 6 / 2;
 }
 
 .binaryArea{
-    background-color: blanchedalmond;
+    background-color: var(--piramryColor);
     grid-area: 2 / 5 / 6 / 6;
 }
 
 .eventKey{
-    background-color: burlywood;
+    background-color: var(--piramryColor);
     grid-area:  6 / 1 / 11 / 2;
 }
 
 .eventLocation{
-    background-color: cornsilk;
+    background-color: var(--piramryColor);
     grid-area:  6 / 2 / 11 / 3;
 }
 
 .eventCode{
-    background-color: blueviolet;
+    background-color: var(--piramryColor);
     grid-area:  6 / 3 / 11 / 4;
 }
 
 .eventCodeNumber{
-    background-color: cadetblue;
+    background-color: var(--piramryColor);
     grid-area:  6 / 4 / 11 / 5;
 }
 
 .keyType{
-    background-color: chocolate;
+    background-color: var(--piramryColor);
     grid-area:  6 / 5 / 11 / 6;
 }
 
 .card{
     padding: 7px;
-    border: 2px solid var(--cardBorderColor) ;
 }
 
 .header{
@@ -167,6 +180,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
     font-size: var(--dataFontSize);
 }
 
@@ -176,6 +190,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-family: var(--noteFontfamily);
     font-weight: bold;
+    padding: 5px;
 }
